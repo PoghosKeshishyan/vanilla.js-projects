@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 30px 0;
+}
+
+#controls div {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#controls div.active {
+    outline: 3px solid white;
+    outline-offset: 5px;
+}
+
+#controls .random {
+    background: linear-gradient(to left, #dcff8f, #ff0083, #7c83ff, #40ffec, #ffd104);
+}
+
+#controls .green {
+    background: #dcff8f;
+}
+
+#controls .yellow {
+    background: #ffd104;
+}
+
+#controls .pink {
+    background: #ff0083;
+}
+
+#controls .blue {
+    background: #7c83ff;
+}
+
+#controls .cyan {
+    background: #40ffec;
+}
+
+#squareContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+
+.square {
+    width: 16px;
+    height: 16px;
+    background: #1d1d1d;
+    margin: 2px;
+    box-shadow: 0 0 2px #000;
+    transition: 2s ease;
+}
+
+.square:hover {
+    transition-duration: 0s;
+}

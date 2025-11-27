@@ -1,0 +1,39 @@
+.about {
+    max-width: 1200px;
+    width: 95%;
+    margin: 80px auto;
+    padding: 20px 0;
+    border-radius: 20px;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about .row .about-text {
+    font-style: italic;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 22px;
+}
+
+.about .row img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+@media (max-width: 1000px) {
+    .about .row {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 420px) {
+    .about .row img {
+        width: 100%;
+    }
+}

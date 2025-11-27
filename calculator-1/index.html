@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>ՀԱՇՎԻՉ</title>
+</head>
+<body>
+    <div id="menu">ՄԵՆՅՈւ</div>
+
+    <nav>
+        <a href="#">Հաշվիչ</a>
+        <a href="#">Թվի բաժանարարներ</a>
+        <a href="#">Պարզ թվերի հաշվիչ</a>
+        <a href="#">Թվի աստիճանի հաշվիչ</a>
+        <a href="#">Տոկոսի հաշվիչ</a>
+    </nav>
+
+    <section class="calculator" id="calculator">
+        <h1>ՀԱՇՎԻՉ</h1>
+        <form class="form" name='calc' id="form">
+            <input type="text" id="calc_input" class="input" name="txt"> <br>
+            <button class="btn" onclick="document.calc.txt.value +='1'">1</button>
+            <button class="btn" onclick="document.calc.txt.value +='2'">2</button>
+            <button class="btn" onclick="document.calc.txt.value +='3'">3</button>
+            <button class="btn_n" onclick="document.calc.txt.value +='+'">+</button> <br>
+            <button class="btn" onclick="document.calc.txt.value +='4'">4</button>
+            <button class="btn" onclick="document.calc.txt.value +='5'">5</button>
+            <button class="btn" onclick="document.calc.txt.value +='6'">6</button>
+            <button class="btn_n" onclick="document.calc.txt.value +='-'">-</button> <br>
+            <button class="btn" onclick="document.calc.txt.value +='7'">7</button>
+            <button class="btn" onclick="document.calc.txt.value +='8'">8</button>
+            <button class="btn" onclick="document.calc.txt.value +='9'">9</button>
+            <button class="btn_n" onclick="document.calc.txt.value +='/'">/</button> <br>
+            <button class="btn_n" onclick="document.calc.txt.value =''">C</button>
+            <button class="btn" onclick="document.calc.txt.value +='0'">0</button>
+            <button class="btn_n" id="delete_icon"><i class="fa-solid fa-delete-left"></i></button>
+            <button class="btn_n" onclick="document.calc.txt.value +='*'">*</button> <br>
+            <button class="btn_n" onclick="document.calc.txt.value +='('">(</button> 
+            <button class="btn_n" onclick="document.calc.txt.value +=')'">)</button>
+            <button class="btn_n" onclick="document.calc.txt.value +='.'">.</button>  
+            <button class="btn_n" id="calc_equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</button>
+        </form>
+    </section>
+
+    <section class="number_divisors" id="divisors">   
+        <h1>ԹՎԻ ԲԱԺԱՆԱՐԱՐՆԵՐ</h1>
+        <form>
+            <input type="number" placeholder="Թիվը">
+            <input type="submit" value="Ստուգել">
+        </form>
+
+        <div class="content">
+            <h2>ՊԱՏԱՍԽԱՆ</h2>
+            <div id="answer"></div>
+        </div>
+    </section>
+
+    <section class="prime_numbers" id="prime">
+        <h1>ՊԱՐԶ ԹՎԵՐԻ ՀԱՇՎԻՉ</h1>
+        <form>
+            <input type="number" placeholder="Թիվը">
+            <input type="submit" value="Ստուգել">
+        </form>
+
+        <div class="all_numbers">
+            <form>
+                <p>Կամ</p>
+                <input type="number" class="all_from_input">
+                <span>-ից մինչև</span>
+                <input type="number" class="all_to_input">
+                <p>թվերի միջակայքում ընկած պարզ թվերը</p>
+                <input type="submit" class="all_submit" value="Ցույց տալ">
+            </form>
+        </div>
+
+        <div class="content">
+            <h2>ՊԱՏԱՍԽԱՆ</h2>
+            <div id="answer"></div>
+        </div>
+    </section>
+
+    <section class="pow_number" id="pow">
+        <h1>ԹՎԻ ԱՍՏԻՃԱՆԻ ՀԱՇՎԻՉ</h1>
+        <form>
+            <input type="number" placeholder="Թիվը" id="pow1">
+            <input type="number" placeholder="Աստիճանը" id="pow2">
+            <input type="submit" value="Ստուգել">
+        </form>
+
+        <div class="content">
+            <h2>ՊԱՏԱՍԽԱՆ</h2>
+            <div id="answer"></div>
+        </div>
+    </section>
+ 
+    <section class="percent" id="percent">
+        <h1>ՏՈԿՈՍԻ ՀԱՇՎԻՉ</h1>
+        <form>
+            <input type="number" placeholder="Թիվը" id="perc1">
+            <input type="number" placeholder="% - ի չափը" id="perc2">
+            <input type="submit" value="Ստուգել">
+        </form>
+
+        <div class="content">
+            <h2>ՊԱՏԱՍԽԱՆ</h2>
+            <div id="answer"></div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>

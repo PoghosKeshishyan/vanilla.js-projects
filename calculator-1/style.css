@@ -1,0 +1,222 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .2s all linear;
+    font-family: 'Segoe UI';
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    background: url(https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-zoom-virtual-background-_Tcjok-d9b4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;                              
+}
+
+section{
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: .2rem .2rem .2rem rgb(255, 255, 255);
+}
+
+input[type="number"]{
+    width: 40%;
+    font-size: 1.1rem;
+    margin: 1.1rem 0;
+    padding: .3rem .4rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: .3rem .3rem 1rem rgb(255, 255, 255);
+}
+
+input[type="submit"]{
+    font-size: 1.1rem;
+    margin: 1.1rem 0;
+    padding: .2rem .4rem;
+    background-color: rgb(111, 214, 255);
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: .3rem .3rem 1rem rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(30, 166, 220);
+}
+
+input[type="submit"]:focus{
+    background-color: rgb(28, 93, 119);
+    color: white;
+}
+
+.content{
+    width: 350px;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+    padding: 8px 0;
+    border: 6px ridge gray;
+    background-color: rgb(65, 211, 255);
+}
+
+.content h2{
+    padding: 5px;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+#answer{
+    width: 100%;
+}
+
+#answer .answerHead{
+    margin: 5px 0;
+    padding: 2px 3px;
+    font-family: 'Consolas';
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+#answer .answerDoc{
+    margin: 5px 0;
+    padding: 2px 3px;
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-size: 1.4rem;
+    background-color: lightgreen;   
+}
+
+#answer .answerSolution{
+    margin: 5px 0;
+    padding: 2px 3px;
+    font-family: 'Consolas';
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* ..................menu, nav.................. */
+#menu{
+    margin: 10px;
+    padding: 5px 40px;
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: rgb(121, 244, 255);
+    cursor: pointer;
+}
+
+#menu:hover{
+    background-color: rgb(27, 157, 172);
+    color: white;
+}
+
+nav{
+    position: absolute;
+    top: 50px; left: 7px;
+    min-width: 30%;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav_active{
+    background-color: rgb(193, 101, 101);
+}
+
+nav a{
+    display: block;
+    margin: .1rem;
+    padding: 5px 20px;
+    border: 2px ridge;
+    background-color: rgb(65, 65, 65);
+    font-size: 1.1rem;
+    color: white;
+} 
+
+nav a:hover{
+    background-color: rgb(47, 150, 159);
+}
+
+nav a:focus{
+    background-color: rgb(193, 101, 101);
+}
+
+/* ..................calculator.................. */
+
+.calculator form input{
+    font-size: 1.1rem;
+    margin: 1.1rem 0;
+    padding: .2rem .4rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: .3rem .3rem 1rem rgb(255, 255, 255);
+}
+
+.calculator form button{
+    width: 50px;
+    margin: 5px;
+    padding: .2rem .4rem;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: .3rem .3rem 1rem rgb(255, 255, 255); 
+    font-size: 1.5rem;  
+    cursor: pointer;
+}
+
+.calculator .btn_n{
+    background-color: rgb(111, 214, 255);
+}
+
+/* ..................prime_numbers.................. */
+.prime_numbers .all_numbers{
+    background-color: rgb(201, 255, 170);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.prime_numbers .all_numbers p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.prime_numbers .all_numbers .all_from_input{
+    width: 90px;
+}
+
+.prime_numbers .all_numbers .all_to_input{
+    width: 90px;
+}
+
+/* ..................pow.................. */
+.pow_number #pow1, #pow2{
+    width: 113px;
+}
+
+/* ..................percent.................. */
+.percent #perc1, #perc2{
+    width: 122px;
+}

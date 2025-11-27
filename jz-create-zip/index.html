@@ -1,0 +1,29 @@
+<html>
+  <head></head>
+  <body>
+    <input type="file" id="fileInput" multiple>
+    <button onclick="zipFiles();">Create Zip</button>
+
+    <script>
+      function zipFiles() {
+        var filesInput = document.getElementById("fileInput");
+        var files = filesInput.files;
+
+        var zip = new JSZip();
+
+        for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          zip.file(file.name, file);
+        }
+
+        zip.generateAsync({ type: "blob" })
+          .then(function(content) {
+          saveAs(content, "files.zip");
+        });
+      }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+  </body>
+</html>

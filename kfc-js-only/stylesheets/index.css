@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import './header.css';
+@import './home.css';
+@import './products.css';
+@import './about.css';
+@import './footer.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    color: #E4042C;
+}
+
+.heading span {
+    background: #e4042d1e;
+    margin: 0 5px;
+    padding: 0 8px;
+    border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .heading span {
+        margin: 0 2px;
+    }
+}
+
+@media (max-width: 360px) {
+    .heading {
+        font-size: 1.5rem;
+    }
+}
