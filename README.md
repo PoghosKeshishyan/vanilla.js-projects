@@ -27,5 +27,5 @@
 - **todo-list** — [Live Demo](https://todo-list-ivory-kappa-78.vercel.app/)
 - **tour-and-travel-website** — [Live Demo](https://tour-and-travel-website-delta.vercel.app/)
 - **travel-website** — [Live Demo](https://travel-website-eight-sepia.vercel.app/)
-- **trello** — [Live Demo](https://github.com/PoghosKeshishyan/trello)
-- **weather-app** — [Live Demo]()
+- **trello** — [Live Demo](https://trello-sable-psi.vercel.app/)
+- **weather-app** — [Live Demo](https://weather-app-phi-brown-11.vercel.app/)
