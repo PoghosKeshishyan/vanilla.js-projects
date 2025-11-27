@@ -6,26 +6,26 @@
 - **board** — [Live Demo](https://board-phi-two.vercel.app/)
 - **calculator-1** — [Live Demo](https://calculator-nine-neon.vercel.app/)
 - **calculator-2** — [Live Demo](https://calculator-2-gilt.vercel.app/)
-- colors
-- dynamically-tic-tac-toe-game
-- earth-project-2
-- earth-project
-- easy-photo-editor
-- flower-shop-website
-- food-website
-- game-catch-rect
-- game-dev-website
-- jz-create-zip
-- kfc-js-only
-- new-year-timer-js
-- pet-food-website
-- portfolio-website
-- slider-3
-- slider
-- stopwatch
-- switch
-- todo-list
-- tour-and-travel-website
-- travel-website
-- trello
-- weather-app
+- **colors** — [Live Demo]()
+- **dynamically-tic-tac-toe-game** — [Live Demo]()
+- **earth-project-2** — [Live Demo]()
+- **earth-project** — [Live Demo]()
+- **easy-photo-editor** — [Live Demo]()
+- **flower-shop-website** — [Live Demo]()
+- **food-website** — [Live Demo]()
+- **game-catch-rect** — [Live Demo]()
+- **game-dev-website** — [Live Demo]()
+- **jz-create-zip** — [Live Demo]()
+- **kfc-js-only** — [Live Demo]()
+- **new-year-timer-js** — [Live Demo]()
+- **pet-food-website** — [Live Demo]
+- **portfolio-website** — [Live Demo]()
+- **slider-3** — [Live Demo]()
+- **slider** — [Live Demo]()
+- **stopwatch** — [Live Demo]()
+- **switch** — [Live Demo]()
+- **todo-list** — [Live Demo]()
+- **tour-and-travel-website** — [Live Demo]()
+- **travel-website** — [Live Demo]()
+- **trello** — [Live Demo]()
+- **weather-app** — [Live Demo]()
