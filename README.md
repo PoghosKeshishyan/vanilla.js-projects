@@ -6,3 +6,26 @@
 - **board** — [Live Demo](https://board-phi-two.vercel.app/)
 - **calculator-1** — [Live Demo](https://calculator-nine-neon.vercel.app/)
 - **calculator-2** — [Live Demo](https://calculator-2-gilt.vercel.app/)
+- colors
+- dynamically-tic-tac-toe-game
+- earth-project-2
+- earth-project
+- easy-photo-editor
+- flower-shop-website
+- food-website
+- game-catch-rect
+- game-dev-website
+- jz-create-zip
+- kfc-js-only
+- new-year-timer-js
+- pet-food-website
+- portfolio-website
+- slider-3
+- slider
+- stopwatch
+- switch
+- todo-list
+- tour-and-travel-website
+- travel-website
+- trello
+- weather-app
