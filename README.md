@@ -7,6 +7,8 @@
 - **calculator-1** — [Live Demo](https://calculator-nine-neon.vercel.app/)
 - **calculator-2** — [Live Demo](https://calculator-2-gilt.vercel.app/)
 - **colors** — [Live Demo](https://colors-six-beta.vercel.app/)
+- **css-animations**
+- **css-filters**
 - **dynamically-tic-tac-toe-game** — [Live Demo](https://dynamically-tic-tac-toe-game.vercel.app/)
 - **earth-project-2** — [Live Demo](https://earth-project-2.vercel.app/)
 - **earth-project** — [Live Demo](https://earth-project-orpin.vercel.app/)
