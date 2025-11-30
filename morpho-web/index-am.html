@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style-am.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts/send-email-am.js" type="module" defer></script>
+    <script src="scripts/script-am.js" type="module" defer></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <title>Morpho</title>
+</head>
+<body>
+
+    <main>
+        <section class="intro">
+            <div class="content">
+                <p class="location">
+                    <img src="images/Frame 4.png" alt="frame">
+                    <span>ԵՐԵՎԱՆ</span>
+                </p>
+
+                <h1 class="heading">ԴԱՍԸՆԹԱՑՆԵՐ</h1>
+                <p class="description">Դասընթացներ ծրագրավորման և վեբ զարգացման</p>
+                <a href="#" class="btn light" id="signUpBtn">ԳՐԱՆՑՎԵԼ ԴԱՍԸՆԹԱՑԻՆ</a>
+            </div>
+
+            <div class="image">
+                <img src="images/Group.png" alt="Group">
+            </div>
+
+            <div class="selectLanguage">
+                <p class="currentLanguage">ՀԱՅ</p>
+
+                <div class="dropdown">
+                    <a href="index.html" class="dropdown-item">EN</a>
+                    <a href="#" class="dropdown-item active">ՀԱՅ</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- modal for sign up for a class -->
+        <div class="modalSignUp" id="modalSignUp">
+            <div class="bg"></div>
+
+            <form id="modalSignUpForm" action="https://api.web3forms.com/submit" method="POST">
+                <h2>
+                    ԳՐԱՆՑՎԵԼ ԴԱՍԸՆԹԱՑԻՆ
+                    <span id="closeSignUpModal">&times;</span>
+                </h2>
+            
+                <input type="hidden" name="access_key" value="b658f2be-a1bb-4ddf-8a1c-0917761f8399">
+            
+                <div class="inputBox">
+                    <p>Անուն ազգանուն</p>
+                    <input type="text" name="Անուն ազգանուն" required autocomplete="off">
+                </div>
+                
+                <div class="inputBox">
+                    <p>Հեռախոսի համարը</p>
+                    <input type="tel" name="Հեռախոսի համարը" required autocomplete="off">
+                </div>
+
+                <div class="inputBox">
+                    <p>Ընտրել դասընթացը</p>
+                    <select name="Դասընթացը" required id="modalCoursesSelect">
+                        <option value="" disabled selected>Դասընթացներ</option>
+                        <option value="Ռոբոտաշինություն">Ռոբոտաշինություն</option>
+                        <option value="Վեբ ծրագրավորում">Վեբ ծրագրավորում</option>
+                        <option value="C# .Net դասընթացներ">C# .Net դասընթացներ</option>
+                        <option value="C++ դասընթացներ">C++ դասընթացներ</option>
+                    </select>
+                </div>
+
+                <div id="resultModalSignUp" class="resultModalSignUp">
+                    <!-- resultModalSignUp data will be added dynamically using JavaScript -->
+                </div>
+            
+                <input type="submit" value="Sign up">
+            </form>                     
+        </div>
+
+        <!-- modal for courses button -->
+        <div class="modalCourses" id="modalCourses">
+            <div class="bg"></div>
+
+            <div class="modal_content">
+                <div class="head">
+                    <p id="modalCoursesTitle"></p>
+                    <span class="closeModalCoursesBtn">&times;</span>
+                </div>
+
+                <p class="modal_text" id="modalCoursesText"></p>
+                <a href="#" class="btn modalCoursesBtn">ԳՐԱՆՑՎԵԼ ԴԱՍԸՆԹԱՑԻՆ</a>
+            </div>
+        </div>
+
+        <section class="courses">
+            <div class="courses-btns-container">
+                <a href="#" data-course="robotics" class="btn light">Ռոբոտաշինություն</a>
+                <a href="#" data-course="web" class="btn dark">Վեբ ծրագրավորում</a>
+                <a href="#" data-course="csharp" class="btn dark">C# .Net դասընթացներ</a>
+                <a href="#" data-course="cpp" class="btn light">C++ դասընթացներ</a>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <div class="content">
+                <h2 class="heading">Հետադարձ կապ</h2>
+
+                <div class="info">
+                    <a href="tel:+37495388868">
+                        <img src="images/fluent_call-24-filled.png" alt="fluent_call">
+                        +374 95 388 868
+                    </a>
+
+                    <a href="mailto::info@morpho.am">
+                        <img src="images/ic_round-mail.png" alt="ic_round-mail">
+                        info@morpho.am
+                    </a>
+
+                    <a href='https://maps.app.goo.gl/YY5N1FnhKt36qqa98' target="_blank">
+                        <img src="images/Frame 4.png" alt="Frame">
+                        Երևան, Կոմիտաս 59
+                    </a>
+                </div>
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.108284139094!2d44.51913787661577!3d40.20665417147427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd347d7b3149%3A0xa6e1adc76b1bcc69!2zNTkg1L_VuNW01avVv9Wh1b3VqyDVutW41bLVuNW_1aEsINS11oDWh9Wh1bYgMDAxNA!5e0!3m2!1shy!2sam!4v1716070291250!5m2!1shy!2sam"
+                        height="167" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="images"> 
+                <div class="column">
+                  <img src="images/Rectangle 1.png" class="img1" alt="Rectangle 1">
+                  <img src="images/Rectangle 3.png" class="img3" alt="Rectangle 3">
+                </div>
+                
+                <div class="column">
+                  <img src="images/Rectangle 2.png" class="img2" alt="Rectangle 2">
+                  <img src="images/Rectangle 4.png" class="img4" alt="Rectangle 4">
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+.box {
+    width: 400px;
+    height: 400px;
+    background: brown;
+    border: 5px solid #000;
+    margin: 100px auto;
+    animation-name: anim;
+    animation-duration: 5s;
+}
+
+@keyframes anim {
+    from {
+        background: yellowgreen;     
+    }
+
+    to {
+        background: palevioletred;
+    }
+}

@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-family: "Noto Sans Armenian", sans-serif;
+}
+
+:root {
+    --white: #ffffff;
+    --light-gray: #d9d9d9;
+    --alpha-gray: #00000033;
+    --blue: #1a73e8;
+    --blue-alpha: #0f2c76cc;
+    --dark-gray: #333333;
+    --gray: #555555;
+    --red: #ff0000;
+    --dark-gradient: linear-gradient(90deg, rgba(69, 16, 138, 1) 2%, rgba(61, 6, 95, 1) 29%, rgba(32, 5, 84, 1) 100%);
+    --light-gradient: linear-gradient(90deg, rgba(19, 139, 189, 1) 4%, rgba(22, 154, 198, 1) 23%, rgba(30, 194, 223, 1) 59%, rgba(42, 246, 255, 1) 100%);
+}
+
+.btn {
+    display: block;
+    padding: 28px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+    border-radius: 20px;
+}
+
+.btn.light {
+    background: var(--light-gradient);
+}
+
+.btn.dark {
+    background: var(--dark-gradient);
+}
+
+/* ========================= intro ========================= */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 100px;
+    color: var(--white);
+    background: var(--dark-gradient);
+}
+
+.intro .content .location {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 600;
+}
+
+.intro .content .location img {
+    width: 24px;
+    height: 31px;
+}
+
+.intro .content .heading {
+    padding: 20px 0;
+    font-size: 60px;
+}
+
+.intro .content .description {
+    line-height: 30px;
+}
+
+.intro .content .btn {
+    margin-top: 40px;
+}
+
+/* Dropdown Styles */
+.intro .selectLanguage {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 70px;
+    padding-bottom: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.intro .selectLanguage .currentLanguage {
+    cursor: pointer;
+    padding: 10px;
+    background: var(--light-gradient);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+.intro .selectLanguage .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 70px;
+    background: var(--white);
+    box-shadow: 0 8px 16px var(--alpha-gray);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.intro .selectLanguage:hover .dropdown {
+    display: block;
+}
+
+.intro .selectLanguage:hover .dropdown .dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--dark-gray);
+}
+
+.intro .selectLanguage:hover .dropdown .dropdown-item:hover {
+    background: var(--light-gray);
+}
+
+
+/* ========================= Modal SignUp ========================= */
+.modalSignUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modalSignUp.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalSignUp .bg {
+    position: absolute;
+    background: var(--blue-alpha);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.modalSignUp form {
+    position: relative;
+    background: var(--white);
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modalSignUp form h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.modalSignUp form h2 span {
+    cursor: pointer;
+    font-size: 36px;
+    color: var(--dark-gray);
+    transition: color 0.3s ease;
+}
+
+.modalSignUp form h2 span:hover,
+.modalSignUp form h2 span:active {
+    color: var(--red);
+}
+
+.modalSignUp form .inputBox {
+    margin-bottom: 20px;
+}
+
+.modalSignUp form .inputBox p {
+    margin-bottom: 10px;
+    color: var(--dark-gray);
+}
+
+.modalSignUp form .inputBox input,
+.modalSignUp form .inputBox select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.modalSignUp form .inputBox input:focus,
+.modalSignUp form .inputBox select:focus {
+    border-color: var(--blue);
+}
+
+.modalSignUp form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background: var(--light-gradient);
+    color: var(--white);
+    border: none;
+    border-radius: 500px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modalSignUp form input[type="submit"]:hover {
+    background: var(--dark-gradient);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================= Modal SignUp ========================= */
+.modalCourses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modalCourses.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalCourses .bg {
+    position: absolute;
+    background: var(--blue-alpha);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.modalCourses .modal_content {
+    position: relative;
+    background: var(--white);
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modalCourses .modal_content .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.modalCourses .modal_content .head span {
+    cursor: pointer;
+    font-size: 36px;
+    color: var(--dark-gray);
+    transition: color 0.3s ease;
+}
+
+.modalCourses .modal_content .head span:hover,
+.modalCourses .modal_content .head span:active {
+    color: var(--red);
+}
+
+.modalCourses .modal_content .modal_text {
+    margin: 20px 0;
+}
+
+.modalCourses .modal_content .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background: var(--light-gradient);
+    color: var(--white);
+    border: none;
+    border-radius: 500px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modalCourses .modal_content .btn:hover {
+    background: var(--dark-gradient);
+}
+
+.modalSignUp form .resultModalSignUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 50px 20px;
+    text-align: center;
+    width: 80%;
+    background: var(--white);
+    border: 1px solid var(--dark-gray);
+    border-radius: 20px;
+    box-shadow: .2rem .3rem 1rem var(--dark-gray),
+                -.2rem .3rem 1rem var(--dark-gray);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modalSignUp form .resultModalSignUp.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalSignUp form .resultModalSignUp i {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    -webkit-text-stroke: 2px white;
+}
+
+.modalSignUp form .resultModalSignUp p {
+    font-size: 1.3rem;
+    line-height: 35px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================= courses ========================= */
+.courses .courses-btns-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    row-gap: 35px;
+    margin: 80px;
+}
+
+.courses .courses-btns-container .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 185px;
+    font-size: 32px;
+}
+
+
+/* ========================= contacts ========================= */
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 133px 150px;
+    background: var(--dark-gradient);
+}
+
+.contacts .content .heading {
+    color: var(--white);
+    font-size: 30px;
+}
+
+.contacts .content .info {
+    margin: 58px 0;
+}
+
+.contacts .content .info a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.contacts .content .map {
+    width: 417px;
+    height: 167px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.contacts .content .map iframe {
+    width: 100%;
+}
+
+.contacts .images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 870px;
+}
+
+.contacts .images .column {
+    flex: 50%;
+}
+
+.contacts .images .column img {
+    vertical-align: middle;
+    margin-bottom: 16px;
+    padding: 0 10px;
+}
+
+.contacts .images .column:nth-child(2) img {
+    margin-bottom: 20px;
+}
+
+
+/* ========================= Responsive Styles ========================= */
+@media (max-width: 1650px) {
+    .contacts {
+        padding: 140px 100px;
+    }
+}
+
+@media (max-width: 1536px) {
+    .intro .image img {
+        width: 650px;
+        height: 658px;
+    }
+
+    .courses .courses-btns-container .btn {
+        font-size: 25px;
+        height: 150px;
+    }
+
+    .courses .courses-btns-container .btn span.btn_description {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1520px) {
+    .contacts {
+        padding: 140px 50px;
+    }
+}
+
+@media (max-width: 1410px) {
+    .contacts {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+        padding: 50px;
+    }
+
+    .contacts .content h2 {
+        text-align: center;
+    }
+
+    .contacts .content .info a {
+        justify-content: center;
+    }
+
+    .contacts .images {
+        width: 80%;
+    }
+
+    .contacts .images img {
+        width: 100%;
+    }
+
+    .contacts .images .column:nth-child(2) img {
+        margin-bottom: 21px;
+    }
+}
+
+@media (max-width: 1236px) {
+    .intro .content .heading {
+        padding: 20px 0;
+        font-size: 60px;
+    }
+
+    .intro .image img {
+        width: 450px;
+        height: 458px;
+    }
+
+    .intro .content .btn {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .contacts .images {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .courses .courses-btns-container {
+        margin: 80px 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .intro {
+        gap: 1rem;
+    }
+
+    .intro .content .description {
+        font-size: 15px;
+    }
+
+    .courses .courses-btns-container .btn {
+        font-size: 20px;
+        height: 130px;
+    }
+
+    .courses .courses-btns-container .btn span.btn_description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .intro {
+        justify-content: center;
+    }
+
+    .intro .content {
+        text-align: center;
+    }
+
+    .intro .content .location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro .image {
+        display: none;
+    }
+
+    .contacts .content .heading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .courses .courses-btns-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .courses .courses-btns-container .btn:nth-child(2),
+    .courses .courses-btns-container .btn:nth-child(4) {
+        background: var(--dark-gradient);
+    }
+
+    .courses .courses-btns-container .btn:nth-child(3) {
+        background: var(--light-gradient);
+    }
+
+    .courses .courses-btns-container .btn span.btn_description {
+        color: var(--white);
+        font-size: 13px;
+    }
+
+    .contacts {
+        padding: 50px 10px;
+    }
+
+    .contacts .images {
+        flex-direction: column;
+    }
+
+    .contacts .images .column:first-child {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro .content .heading {
+        font-size: 40px;
+    }
+
+    .intro .content .description {
+        font-size: 15px;
+    }
+
+    .intro .content .btn {
+        padding: 13px;
+        font-size: 13px;
+    }
+
+    .modalSignUp form {
+        margin-top: -120px;
+        padding: 15px;
+    }
+
+    .modalSignUp form h2 {
+        font-size: 24px;
+    }
+
+    .modalCourses .modal_content {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .intro .content {
+        margin-top: -130px;
+    }
+
+    .contacts .content .heading {
+        font-size: 35px;
+    }
+
+    .contacts .content .info a {
+        margin: 20px;
+    }
+
+    .contacts .content .map {
+        width: 350px;
+    }
+}
+
+@media (max-width: 380px) {
+    .contacts .content .map {
+        width: 320px;
+    }
+}
+
+@media (max-width: 340px) {
+    .intro {
+        padding: 0 20px;
+    }
+
+    .intro .content .location {
+        font-size: 12px;
+    }
+
+    .intro .content .location img {
+        width: 18px;
+        height: 22px;
+    }
+
+    .contacts .content .map {
+        width: 280px;
+    }
+}

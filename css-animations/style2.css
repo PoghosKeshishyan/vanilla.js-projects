@@ -1,0 +1,56 @@
+.box {
+    width: 1000px;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid;
+    font-size: 1.5rem;
+    font-family: 'Arial';
+    -webkit-text-stroke: 1px;
+    position: relative;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 2rem gray inset;
+    text-align: center;
+}
+
+.box img {
+    width: 200px;
+    left: 800px;
+    position: absolute;
+    animation-name: go;
+    animation-duration: 2s;
+}
+
+.img1 {
+    animation-timing-function: linear;
+}
+
+.img2 {
+    animation-timing-function: ease;
+}
+
+.img3 {
+    animation-timing-function: ease-in;
+}
+
+.img4 {
+    animation-timing-function: ease-out;
+}
+
+.img5 {
+    animation-timing-function: ease-in-out;
+}
+
+.img6 {
+    animation-timing-function: cubic-bezier(.68,.97,.26,1.56);
+}
+
+@keyframes go {
+    from {
+        left: 0;
+    } 
+
+    to {
+        left: 800px;
+    }
+}

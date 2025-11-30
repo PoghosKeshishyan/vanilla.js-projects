@@ -1,0 +1,50 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: brown;
+    border: 5px solid #000;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    text-align: center;
+    line-height: 100px;
+    font: 5rem Arial;
+    color: #fff;
+
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: 2;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anim {
+    0% {
+        background: yellowgreen;     
+    }
+
+    25% {
+        top: 80px;
+        left: 500px;
+        transform: scale(1.5);
+        transform: rotate(90deg);
+    }
+
+    50% {
+        left: 500px;
+        top: 500px;
+        transform: rotate(180deg);
+        transform: scale(2);
+    }
+
+    75% {
+        left: 70px;
+        top: 500px;
+        transform: rotate(270deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+        background: palevioletred;
+    }
+}
