@@ -1,4 +1,4 @@
-# Here you can find my projects built with Vanilla JavaScript.
+# 🟨 </> ｡🇯‌🇸‌ #️⃣ 🟦 Here you can find my projects built with HTML, CSS and Vanilla JavaScript.
 
 - **Dinosaur-T-Rex-Game-Google** — [Live Demo](https://dinosaur-t-rex-game-google.vercel.app/)
 - **Emulation-of-the-Windows-XP-color-scheme** — [Live Demo](https://emulation-of-the-windows-xp-color-scheme.vercel.app/)
