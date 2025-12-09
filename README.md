@@ -25,6 +25,7 @@
 - **pet-food-website** — [Live Demo](https://pet-food-website-gray.vercel.app/)
 - **portfolio-website** — [Live Demo](https://portfolio-fawn-zeta-63.vercel.app/)
 - **slider-3** — [Live Demo](https://slider-3-two.vercel.app/)
+- **slider-js-modules** - [Live Demo](https://slider-js-modules.vercel.app/)
 - **slider** — [Live Demo](https://slider-kappa-flame.vercel.app/)
 - **stopwatch** — [Live Demo](https://stopwatch-rosy-mu.vercel.app/)
 - **switch** — [Live Demo](https://switch-xi.vercel.app/)
