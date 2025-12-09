@@ -1,0 +1,44 @@
+:root {
+    --white: #fff;
+    --dark: #333;
+    --bg: #0d6efd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    font-family: Arial;
+}
+
+body {
+    background: var(--white);
+}
+
+body.active {
+    --white: #333;
+    --dark: #fff;
+    --bg: #198754;
+}
+
+header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+    padding: 10px 20px;
+}
+
+header i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main p {
+    color: var(--dark);
+    font-size: 30px;
+    margin: 50px;
+    width: 600px;
+}
