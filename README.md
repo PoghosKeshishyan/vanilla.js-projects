@@ -9,6 +9,7 @@
 - **colors** — [Live Demo](https://colors-six-beta.vercel.app/)
 - **css-animations**
 - **css-filters**
+- **dark-light-mode** - [Live Demo](https://dark-light-mode-js.vercel.app/)
 - **dynamically-tic-tac-toe-game** — [Live Demo](https://dynamically-tic-tac-toe-game.vercel.app/)
 - **earth-project-2** — [Live Demo](https://earth-project-2.vercel.app/)
 - **earth-project** — [Live Demo](https://earth-project-orpin.vercel.app/)
