@@ -1,0 +1,18 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: purple;
+    border: 5px solid #000;
+    font-size: 5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-family: Impact;
+    margin: 300px auto;
+    transition: 1s linear;
+
+    &:hover {
+        background: plum;
+        transform: scale(5) rotate(360deg);
+    }
+}
